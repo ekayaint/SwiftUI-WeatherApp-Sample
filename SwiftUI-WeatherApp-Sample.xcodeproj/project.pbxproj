@@ -11,6 +11,8 @@
 		49C40A0F2ABF0C8A00C5ADBB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C40A0E2ABF0C8A00C5ADBB /* ContentView.swift */; };
 		49C40A112ABF0C8B00C5ADBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C40A102ABF0C8B00C5ADBB /* Assets.xcassets */; };
 		49C40A142ABF0C8B00C5ADBB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49C40A132ABF0C8B00C5ADBB /* Preview Assets.xcassets */; };
+		49C40A1F2ABF0D4400C5ADBB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C40A1E2ABF0D4400C5ADBB /* LocationManager.swift */; };
+		49C40A212ABF11F500C5ADBB /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C40A202ABF11F500C5ADBB /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		49C40A0E2ABF0C8A00C5ADBB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		49C40A102ABF0C8B00C5ADBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C40A132ABF0C8B00C5ADBB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		49C40A1E2ABF0D4400C5ADBB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		49C40A202ABF11F500C5ADBB /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +56,10 @@
 			isa = PBXGroup;
 			children = (
 				49C40A0C2ABF0C8A00C5ADBB /* SwiftUI_WeatherApp_SampleApp.swift */,
-				49C40A0E2ABF0C8A00C5ADBB /* ContentView.swift */,
+				49C40A1A2ABF0CB700C5ADBB /* Views */,
+				49C40A1B2ABF0CDB00C5ADBB /* Managers */,
+				49C40A1C2ABF0CF900C5ADBB /* Components */,
+				49C40A1D2ABF0D1600C5ADBB /* Utilities */,
 				49C40A102ABF0C8B00C5ADBB /* Assets.xcassets */,
 				49C40A122ABF0C8B00C5ADBB /* Preview Content */,
 			);
@@ -65,6 +72,37 @@
 				49C40A132ABF0C8B00C5ADBB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		49C40A1A2ABF0CB700C5ADBB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49C40A0E2ABF0C8A00C5ADBB /* ContentView.swift */,
+				49C40A202ABF11F500C5ADBB /* WelcomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49C40A1B2ABF0CDB00C5ADBB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				49C40A1E2ABF0D4400C5ADBB /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		49C40A1C2ABF0CF900C5ADBB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		49C40A1D2ABF0D1600C5ADBB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +177,8 @@
 			files = (
 				49C40A0F2ABF0C8A00C5ADBB /* ContentView.swift in Sources */,
 				49C40A0D2ABF0C8A00C5ADBB /* SwiftUI_WeatherApp_SampleApp.swift in Sources */,
+				49C40A1F2ABF0D4400C5ADBB /* LocationManager.swift in Sources */,
+				49C40A212ABF11F500C5ADBB /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
