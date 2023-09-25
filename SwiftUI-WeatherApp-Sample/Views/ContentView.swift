@@ -9,15 +9,41 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var locationManager = LocationManager()
+    private var weatherManager = WeatherManager()
+    @State var weather: WeatherResponse?
     
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if let location = locationManager.location {
+                if let weather = weather {
+                    Text("Current coordinates, \(location.longitude), \(location.latitude)")
+                } else {
+                    LoadingView()
+                        .task {
+                            weatherManager.getWeatherData(for: location) { result in
+                                switch result {
+                                    
+                                case .success(let weather):
+                                    self.weather = weather
+                                case .failure(let error):
+                                    print( "Error while getting data, \(error)")
+                                } //: switch
+                            }
+                        } //: task
+                } //: if else
+                
+            } else {
+                if locationManager.isLoading {
+                    LoadingView()
+                }
+                else {
+                    WelcomeView(locationManager: locationManager)
+                }
+            }
+            
+           
         }
-        .padding()
+         
     }
 }
 
