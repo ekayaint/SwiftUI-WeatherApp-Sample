@@ -16,7 +16,8 @@ struct ContentView: View {
         VStack {
             if let location = locationManager.location {
                 if let weather = weather {
-                    Text("Current coordinates, \(location.longitude), \(location.latitude)")
+                    //Text("Weather data loaded")
+                    WeatherView(weather: weather)
                 } else {
                     LoadingView()
                         .task {
